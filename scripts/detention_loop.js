@@ -1141,9 +1141,7 @@ function loadPixelMap(mapName, pixelArray) {
 
   if (numCols > 160 || numRows > 128) {
     isTransitioning = false
-
     throw new Error("Map dimensions exceed the maximum allowed size of 160x128 pixels.")
-    return
   }
 
   let tileRows = Math.ceil(numRows / 16)
@@ -1181,9 +1179,7 @@ function loadPixelMap(mapName, pixelArray) {
 
           if (!assignedChar) {
             isTransitioning = false
-
             throw new Error("Ran out of unique symbols for the map legend. Please reduce the number of unique tiles.")
-            return
           }
 
           uniqueBitmaps[bitmapString] = assignedChar

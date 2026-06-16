@@ -22,9 +22,12 @@ COLOR_MAP = {
 }
 
 
-def convert_to_raw_pixel_map(image_path):
+def convert_to_character_map(image_path):
     img = Image.open(image_path).convert("RGBA")
     width, height = img.size
+
+    if width > 160 or height > 128:
+        raise ValueError(f"Warning: Image {image_path} exceeds 160x160 pixels. It may not display correctly.")
 
     file_stem = Path(image_path).stem
     script_dir = Path(__file__).resolve().parent
@@ -48,4 +51,4 @@ script_dir = Path(__file__).resolve().parent
 png_folder = (script_dir / "../assets/png").resolve()
 
 for image_path in png_folder.glob("*.png"):
-    convert_to_raw_pixel_map(str(image_path))
+    convert_to_character_map(str(image_path))
