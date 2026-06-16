@@ -1123,7 +1123,8 @@ L1L1L1L1L1L1L1L.
 ................
 ................
 ................
-................`]]
+................`]
+]
 
 function loadPixelMap(mapName, pixelArray) {
   if (isTransitioning) return
@@ -1344,12 +1345,12 @@ onInput("w", () => {
       score = 0
 
     anomaliesSpawned = false
-    const PADDING_LENGTH = String(Math.abs(score)).length + 2;
+    const PADDING_LENGTH = String(Math.abs(score)).length + 2
 
     transitionMap(map`
-      ${"~".repeat(PADDING_LENGTH)}
-      ~${score}~
-      ${"~".repeat(PADDING_LENGTH)}`,
+      ${BLACK_TILE.repeat(PADDING_LENGTH)}
+      ${BLACK_TILE}${score}${BLACK_TILE}
+      ${BLACK_TILE.repeat(PADDING_LENGTH)}`,
     GLOBAL_LEGEND, TRANSITION_ROW_DELAY, TRANSITION_COLUMN_DELAY)
   }
 })
@@ -1366,12 +1367,12 @@ onInput("s", () => {
       score = 0
 
     anomaliesSpawned = false
-    const PADDING_LENGTH = String(Math.abs(score)).length + 2;
+    const PADDING_LENGTH = String(Math.abs(score)).length + 2
 
     transitionMap(map`
-      ${"~".repeat(PADDING_LENGTH)}
-      ~${score}~
-      ${"~".repeat(PADDING_LENGTH)}`,
+      ${BLACK_TILE.repeat(PADDING_LENGTH)}
+      ${BLACK_TILE}${score}${BLACK_TILE}
+      ${BLACK_TILE.repeat(PADDING_LENGTH)}`,
     GLOBAL_LEGEND, TRANSITION_ROW_DELAY, TRANSITION_COLUMN_DELAY)
   }
 })

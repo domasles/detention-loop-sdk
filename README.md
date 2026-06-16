@@ -17,12 +17,15 @@ detention-loop-sdk/
 ├─ branding/
 │  └─ thumbnail/
 ├─ scripts/
+│  ├─ snippets/
 │  ├─ convert_images.py
 │  └─ detention_loop.js
 └─ README.md
 ```
 
-Every image has a corresponding .xcf file for editing
+Every image has a corresponding .xcf file for editing.
+
+`scripts/snippets/` contains reusable code snippets that can be imported into any Sprig project (with minor adaptations).
 
 ## Usage
 
@@ -49,7 +52,7 @@ If chosen correctly, score increases by one. <br>
 Reach 10 to win!
 
 ## Demo
-A live demo of the game is available [here](https://sprig.hackclub.com/share/eG8eCsxHuKfyY7l6eada)! Feel free to check it out!
+A live demo of the game is available [here](https://sprig.hackclub.com/share/tSdUbc76LyacSUCvsFFd)! Feel free to check it out!
 
 ## Support
 For issues, feature requests, or questions, please open an issue or submit a pull request on GitHub.
